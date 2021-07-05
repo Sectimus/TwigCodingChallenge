@@ -1,1 +1,3 @@
 # TwigCodingChallenge
+The function begins with the ```sizeperchunk``` variable being defined as the input array size divided by ```n```. When this is rounded up to the nearest whole integer, this gives us the amount of elements in each section / chunk (excluding the final leftover chunk).
+We loop once for every chunk, *this is more efficent than looping once per element as it will reduce the amount of recursion to an ```n```'th fraction.* The slicing operator ```[x:y]``` is used to pull out the selected chunk of the array and append it to the output array, since slicing in Python is fundamentally different to indexing an array ```[x]``` (although similar syntax) the index selected can be out of range and still return the remainder.
